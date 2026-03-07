@@ -1,20 +1,16 @@
-/* =========================
-   ROOT VARIABLES (WMSU Theme)
-   ========================= */
+/* ROOT VARIABLES that corresponds to the colors of WMSU */
 :root {
-  --wmsu-maroon: #800000;    /* Primary Brand Color */
-  --wmsu-gold: #ffc107;      /* Primary CTA Color */
-  --bg-light: #f9f9f9;       /* Light neutral background */
+  --wmsu-maroon: #800000;    /* This is the primary brand color that we are using */
+  --wmsu-gold: #ffc107;      
+  --bg-light: #f9f9f9;       /* This is to have a light neutral background */
   --text-main: #1e293b;
   --text-muted: #64748b;
   
-  --radius-card: 16px;       /* Consistent rounded corners */
-  --radius-btn: 6px;         /* Sharper button corners */
+  --radius-card: 16px;       /* This for the details to have consistent rounded corners */
+  --radius-btn: 6px;         /* for sharper button corners */
 }
 
-/* =========================
-   GLOBAL RESET
-   ========================= */
+/* GLOBAL RESET */
 * {
   margin: 0;
   padding: 0;
@@ -28,9 +24,7 @@ body {
   line-height: 1.6;
 }
 
-/* =========================
-   HEADER / NAV (Matching Style)
-   ========================= */
+/* HEADER / NAV (Matching Style) */
 header {
   background-color: var(--wmsu-maroon);
   color: white;
@@ -73,19 +67,7 @@ header {
   color: var(--wmsu-gold);
 }
 
-.btn-login {
-  background: transparent;
-  border: 1px solid white;
-  color: white;
-  padding: 0.4rem 1.2rem;
-  border-radius: var(--radius-btn);
-  cursor: pointer;
-  font-weight: 600;
-}
-
-/* =========================
-   MAIN LAYOUT
-   ========================= */
+/* MAIN LAYOUT */
 main {
   max-width: 1100px;
   margin: 0 auto;
@@ -100,6 +82,73 @@ main {
 
 .breadcrumb strong {
   color: var(--wmsu-maroon);
+}
+
+/* VISUAL PROGRESS STEPPER */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  max-width: 600px; /* This keeps it centered and not too wide */
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.step-number, .step-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #e2e8f0; /* Default gray */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #64748b;
+  transition: all 0.3s ease;
+}
+
+/* Completed Step (Maroon) */
+.step.completed .step-icon {
+  background: var(--wmsu-maroon);
+  color: white;
+}
+
+/* Active Step (Gold) */
+.step.active .step-number {
+  background: var(--wmsu-gold);
+  color: #1a1a1a;
+  box-shadow: 0 0 0 4px rgba(255, 193, 7, 0.2);
+}
+
+.step-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.step.active .step-text {
+  color: var(--text-main);
+}
+
+/* This is for the lines connecting the circles */
+.step-line {
+  flex: 1;
+  height: 2px;
+  background: #e2e8f0;
+  margin: 0 10px;
+  margin-bottom: 24px; /* This aligns the line with the circles */
+}
+
+.step-line.active {
+  background: var(--wmsu-maroon);
 }
 
 .hero-text h1 {
@@ -119,9 +168,7 @@ main {
   gap: 2rem;
 }
 
-/* =========================
-   CARDS & COMPONENTS
-   ========================= */
+/* CARDS & COMPONENTS */
 .card {
   background: white;
   border-radius: var(--radius-card);
@@ -219,9 +266,7 @@ input[type="radio"] {
   color: var(--text-main);
 }
 
-/* =========================
-   BUTTONS
-   ========================= */
+/* BUTTONS */
 .btn-confirm {
   width: 100%;
   background-color: var(--wmsu-gold);
@@ -244,9 +289,7 @@ input[type="radio"] {
   transform: scale(0.98);
 }
 
-/* =========================
-   FOOTER
-   ========================= */
+/* FOOTER */
 footer {
   text-align: center;
   padding: 2rem;

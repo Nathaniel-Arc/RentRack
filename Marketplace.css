@@ -1,0 +1,68 @@
+:root {
+    --wmsu-red: #8b0000;
+}
+
+body { margin: 0; font-family: sans-serif; }
+
+/* Fixed Container Width to prevent "spreading" when zoomed out */
+.nav-container, .hero-content, .content-wrapper, .footer-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+/* Header */
+header { padding: 15px 0; border-bottom: 1px solid #eee; }
+.nav-container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-weight: bold; color: var(--wmsu-red); font-size: 1.2rem; }
+.logo span { color: #333; }
+nav a { margin: 0 10px; text-decoration: none; color: #555; font-size: 0.9rem; }
+nav a.active { color: var(--wmsu-red); font-weight: bold; }
+
+.login-btn, .register-btn { padding: 6px 15px; border-radius: 5px; cursor: pointer; border: none; }
+.login-btn { background: none; color: var(--wmsu-red); border: 1px solid var(--wmsu-red); }
+.register-btn { background: #ffd700; margin-left: 10px; }
+
+/* Hero */
+.hero { background: var(--wmsu-red); color: white; padding: 50px 0; }
+.hero h1 { margin: 0; }
+.search-box input { width: 300px; padding: 10px; margin-top: 20px; border-radius: 4px; border: none; }
+
+/* Marketplace Grid - 4 Columns */
+.marketplace-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+.item-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; }
+.card-image { height: 150px; background: #eee; padding: 10px; font-size: 0.7rem; font-weight: bold; display: flex; align-items: flex-end; }
+.card-info { padding: 15px; }
+.card-info h3 { margin: 0; font-size: 1rem; }
+.campus { font-size: 0.8rem; color: #888; margin: 5px 0; }
+.stars { font-size: 0.8rem; color: #f1c40f; }
+
+.card-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f9f9f9; margin-top: 10px; padding-top: 10px; }
+.price { font-weight: bold; color: var(--wmsu-red); font-size: 1.1rem; }
+.price span { font-size: 0.7rem; color: #aaa; }
+.rent-button { background: var(--wmsu-red); color: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+
+/* Footer */
+footer { background: var(--wmsu-red); color: white; padding: 40px 0 20px; margin-top: 50px; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+.footer-grid h4 { font-size: 1rem; margin-bottom: 15px; }
+.footer-grid ul { list-style: none; padding: 0; font-size: 0.85rem; line-height: 2; opacity: 0.8; }
+.footer-brand p { font-size: 0.85rem; line-height: 1.6; opacity: 0.8; }
+.footer-contact p { font-size: 0.85rem; margin-bottom: 10px; opacity: 0.8; }
+
+.footer-bottom { 
+    max-width: 1100px; 
+    margin: 40px auto 0; 
+    padding: 20px 20px 0; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    display: flex; 
+    justify-content: space-between; 
+    font-size: 0.75rem; 
+    opacity: 0.6;
+}

@@ -1,65 +1,307 @@
 :root {
-    --wmsu-red: #8b0000;
+    --wmsu-maroon: #8b0000;
+    --wmsu-gold: #ffd700;
+    --bg-white: #ffffff;
+    --light-gray: #f5f5f5;
+    --border-soft: #eeeeee;
 }
 
-body { margin: 0; font-family: sans-serif; }
+body { 
+    margin: 0; 
+    font-family: 'Inter', 'Segoe UI', sans-serif; 
+    background-color: var(--bg-white);
+}
 
-/* Fixed Container Width to prevent "spreading" when zoomed out */
+/* 1. STICKY HEADER */
+header { 
+    padding: 12px 0; 
+    border-bottom: 1px solid var(--border-soft);
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1100;
+}
+
 .nav-container, .hero-content, .content-wrapper, .footer-grid {
-    max-width: 1100px;
+    max-width: 1100px; /* Keeps the page from stretching when zoomed */
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 
-/* Header */
-header { padding: 15px 0; border-bottom: 1px solid #eee; }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-weight: bold; color: var(--wmsu-red); font-size: 1.2rem; }
-.logo span { color: #333; }
-nav a { margin: 0 10px; text-decoration: none; color: #555; font-size: 0.9rem; }
-nav a.active { color: var(--wmsu-red); font-weight: bold; }
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
 
-.login-btn, .register-btn { padding: 6px 15px; border-radius: 5px; cursor: pointer; border: none; }
-.login-btn { background: none; color: var(--wmsu-red); border: 1px solid var(--wmsu-red); }
-.register-btn { background: #ffd700; margin-left: 10px; }
+.logo { 
+    font-weight: bold; 
+    color: var(--wmsu-maroon); 
+    font-size: 1.1rem; 
+}
 
-/* Hero */
-.hero { background: var(--wmsu-red); color: white; padding: 50px 0; }
-.hero h1 { margin: 0; }
-.search-box input { width: 300px; padding: 10px; margin-top: 20px; border-radius: 4px; border: none; }
+.logo span { 
+    color: #333; 
+}
 
-/* Marketplace Grid - 4 Columns */
+nav a { 
+    margin: 0 12px; 
+    text-decoration: none; 
+    color: #666; 
+    font-size: 0.85rem; 
+}
+
+nav a.active { 
+    color: var(--wmsu-maroon); 
+    font-weight: 600; 
+}
+
+/* Applying your requested style to buttons */
+.login-btn, .register-btn { 
+    padding: 10px 20px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    border: none; 
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.login-btn { 
+    background: none; 
+    color: var(--wmsu-maroon); 
+    border: 1px solid var(--wmsu-maroon); 
+}
+
+.register-btn { 
+    background: var(--wmsu-gold); 
+    margin-left: 8px; 
+}
+
+/* 2. HERO SECTION */
+.hero { 
+    background: var(--wmsu-maroon); 
+    color: white; 
+    padding: 50px 0; 
+}
+
+.hero h1 { 
+    margin: 0; 
+    font-size: 2rem; 
+}
+
+.hero p { 
+    opacity: 0.85; 
+    margin: 8px 0 25px 0; 
+    font-size: 0.95rem; 
+}
+
+/* The style you requested */
+.search-box input { 
+    width: 350px; 
+    padding: 12px; 
+    border-radius: 6px; 
+    border: none; 
+    font-size: 0.9rem;
+    outline: none;
+}
+
+/* 3. STICKY FILTER BAR */
+.filter-bar {
+    position: sticky;
+    top: 65px; /* Adjust based on header height */
+    background-color: #fff;
+    padding: 15px 0;
+    z-index: 1000;
+    display: flex;
+    gap: 8px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.filter-btn { 
+    padding: 8px 16px; 
+    border: none; /* Removed border to match input style */
+    background: var(--light-gray); 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-size: 0.8rem;
+    color: #555;
+    transition: 0.2s ease;
+}
+
+.filter-btn.active { 
+    background: var(--wmsu-maroon); 
+    color: white; 
+}
+
+.results-info { 
+    font-size: 0.8rem; 
+    color: #999; 
+    margin: 20px 0; 
+}
+
+/* 4. MARKETPLACE GRID */
 .marketplace-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
 }
 
-.item-card { border: 1px solid #eee; border-radius: 12px; overflow: hidden; background: #fff; }
-.card-image { height: 150px; background: #eee; padding: 10px; font-size: 0.7rem; font-weight: bold; display: flex; align-items: flex-end; }
-.card-info { padding: 15px; }
-.card-info h3 { margin: 0; font-size: 1rem; }
-.campus { font-size: 0.8rem; color: #888; margin: 5px 0; }
-.stars { font-size: 0.8rem; color: #f1c40f; }
+.item-card { 
+    border: 1px solid var(--border-soft); 
+    border-radius: 12px; /* Smooth rounded corners */
+    overflow: hidden; 
+    transition: transform 0.2s ease;
+}
 
-.card-action { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #f9f9f9; margin-top: 10px; padding-top: 10px; }
-.price { font-weight: bold; color: var(--wmsu-red); font-size: 1.1rem; }
-.price span { font-size: 0.7rem; color: #aaa; }
-.rent-button { background: var(--wmsu-red); color: white; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; }
+.item-card:hover { 
+    transform: translateY(-4px); 
+}
 
-/* Footer */
-footer { background: var(--wmsu-red); color: white; padding: 40px 0 20px; margin-top: 50px; }
-.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
-.footer-grid h4 { font-size: 1rem; margin-bottom: 15px; }
-.footer-grid ul { list-style: none; padding: 0; font-size: 0.85rem; line-height: 2; opacity: 0.8; }
-.footer-brand p { font-size: 0.85rem; line-height: 1.6; opacity: 0.8; }
-.footer-contact p { font-size: 0.85rem; margin-bottom: 10px; opacity: 0.8; }
+.card-image { 
+    height: 150px; 
+    background-color: #f0f0f0; 
+    padding: 10px; 
+    font-size: 0.7rem; 
+    font-weight: bold; 
+    display: flex; 
+    align-items: flex-end; 
+}
+
+.card-image img {
+    width: 100%;
+    height: 180px; /* Or whatever height you prefer */
+    object-fit: cover; /* This makes sure the picture doesn't stretch */
+    display: block;
+}
+
+/* Category Tag Colors */
+.media { 
+    color: #e67e22; 
+}
+
+.academic { 
+    color: #3498db; 
+}
+
+.textbooks { 
+    color: #8e44ad; 
+}
+
+.lab { 
+    color: #27ae60; 
+}
+
+.card-info { 
+    padding: 15px;
+}
+
+.card-info h3 { 
+    margin: 0; 
+    font-size: 0.95rem; 
+    font-weight: 600; 
+}
+
+.campus { 
+    font-size: 0.8rem; 
+    color: #888; 
+    margin: 6px 0; 
+}
+
+.stars { 
+    font-size: 0.8rem; 
+    color: #f1c40f; 
+    margin-bottom: 12px; 
+}
+
+.card-action { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 15px; 
+    padding-top: 10px; 
+}
+
+.price { 
+    font-weight: bold; 
+    font-size: 1.2rem; 
+    color: #333;
+    white-space: nowrap;
+}
+
+.price small {
+    fonnt-size: o.75rem;
+    color: #777;
+    margin-left: 2px;
+}
+
+.price span { 
+    font-size: 0.75rem; 
+    color: #bbb; 
+    font-weight: normal; 
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #e0e0e0;
+    margin: 0 12px;
+}
+
+.rent-button { 
+    background-color: #800000; 
+    color: white; 
+    border: none; 
+    padding: 8px 20px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-weight: 600;
+}
+
+/* 5. FOOTER */
+footer { 
+    background: var(--wmsu-maroon); 
+    color: white; 
+    padding: 50px 0 20px; 
+    margin-top: 40px;
+ }
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr; 
+    gap: 30px; 
+}
+
+.footer-grid h4 { 
+    font-size: 0.9rem; 
+    margin-bottom: 15px; 
+    color: var(--wmsu-gold); 
+}
+
+.footer-grid ul { 
+    list-style: none; 
+    padding: 0; 
+    font-size: 0.85rem; 
+    line-height: 2; 
+    opacity: 0.8; 
+}
+
+.footer-brand p { 
+    font-size: 0.85rem; 
+    line-height: 1.5; 
+    opacity: 0.8; 
+}
+
+.footer-contact p { 
+    font-size: 0.85rem; 
+    margin-bottom: 8px; 
+    opacity: 0.8; 
+}
 
 .footer-bottom { 
     max-width: 1100px; 
-    margin: 40px auto 0; 
-    padding: 20px 20px 0; 
+    margin: 30px auto 0; 
+    padding: 20px 0 0; 
     border-top: 1px solid rgba(255,255,255,0.1); 
     display: flex; 
     justify-content: space-between; 

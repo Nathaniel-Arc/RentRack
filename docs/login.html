@@ -29,15 +29,15 @@
 
     <main class="auth-container">
         <div class="auth-header">
-            <h1>WMSU KitCycle</h1>
+            <h1>WMSU <span style="color: black;">KitCycle</span></h1>
             <p>Welcome back! Login to your account</p>
         </div>
 
         <div class="auth-card">
-            <form>
+            <form id="loginForm">
                 <div class="input-group">
                     <label>Login As</label>
-                    <select required>
+                    <select id="role" required>
                         <option value="student">Student</option>
                         <option value="faculty">Faculty</option>
                         <option value="admin">Admin</option>
@@ -80,6 +80,20 @@
         </div>
         <p class="secure-note">Only verified WMSU students can access KitCycle. Your data is secure and encrypted.</p>
     </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const role = document.getElementById('role').value;
+            if (role === 'student') {
+                window.location.href = 'student-dashboard.html';
+            } else if (role === 'faculty') {
+                window.location.href = 'faculty-dashboard.html';
+            } else if (role === 'admin') {
+                window.location.href = 'admin-dashboard.html';
+            }
+        });
+    </script>
 
     <footer class="footer">
         <div class="footer-content">

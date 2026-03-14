@@ -28,169 +28,182 @@
         <div class="hero-content">
             <h1>Browse Marketplace</h1>
             <p>Find the perfect academic gear from fellow WMSU students</p>
-            <div class="search-box">
-                <input type="text" placeholder="Search for items...">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for items...">
+                <button class="search-btn">Search</button>
             </div>
         </div>
     </section>
 
     <main class="content-wrapper">
         <div class="filter-bar">
-            <button class="filter-btn active">All</button>
-            <button class="filter-btn">Academic Tools</button>
-            <button class="filter-btn">Media Equipment</button>
-            <button class="filter-btn">Laboratory Equipment</button>
-            <button class="filter-btn">Textbooks</button>
-        </div>
+        <button class="filter-btn active">All Items</button>
+        <button class="filter-btn">Academic Tools</button>
+        <button class="filter-btn">Media Equipment</button>
+        <button class="filter-btn">Lab Gear</button>
+        <button class="filter-btn">Textbooks</button>
+    </div>
 
-        <p class="results-info">9 items found</p>
-
-
-        <div class="marketplace-grid">
-    <div class="item-card">
-        <div class="card-image media">
-            <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=600" alt="Canon 90D">
-        </div>
-        <div class="card-info">
-            <h3>Canon EOS 90D DSLR</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.9 (23)</p>
-        <div class="card-action">
-                <span class="price">P250<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
+    <div class="results-header">
+        <p class="results-info">Showing <strong>9</strong> items available today</p>
+        <div class="sort-dropdown">
+            <span>Sort by: </span>
+            <select>
+                <option>Newest First</option>
+                <option>Price: Low to High</option>
+            </select>
         </div>
     </div>
 
-    <div class="item-card">
-        <div class="card-image academic">
-            <img src="https://images.unsplash.com/photo-1583912267550-d44d4a3c399a?q=80&w=600" alt="Scientific Calculator">
-        </div>
-        <div class="card-info">
-            <h3>Scientific Calculator TI-84</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 5 (45)</p>
-        <div class="card-action">
-                <span class="price">P50<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
+    <div class="marketplace-grid">
+        <div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge media-bg">Media</span>
+        <span class="availability">Available Today</span>
+        <img src="https://images.unsplash.com/photo-1576299090369-9067e4adca28?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dHJpcG9kfGVufDB8fDB8fHww" alt="Tripod">
     </div>
-
-    <div class="item-card">
-        <div class="card-image textbooks">
-            <img src="https://images.unsplash.com/photo-1532012197267-da84d127e765?q=80&w=600" alt="Textbooks">
-        </div>
-        <div class="card-info">
-            <h3>Engineering Textbook Bundle</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.8 (10)</p>
+    <div class="card-info">
+        <h3>Professional Camera Tripod</h3>
+        <p class="campus">📍 Main Campus</p>
+        <div class="rating">⭐ 4.8 <span class="review-count">(17 reviews)</span></div>
         <div class="card-action">
-                <span class="price">P100<small>/week</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image lab">
-            <img src="https://images.unsplash.com/photo-1526413232644-8a40f03cc03b?q=80&w=600" alt="Microscope">
-        </div>
-        <div class="card-info">
-            <h3>Laboratory Microscope</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.7 (12)</p>
-        <div class="card-action">
-                <span class="price">P150<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image media">
-            <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=600" alt="Video Camera">
-        </div>
-        <div class="card-info">
-            <h3>Professional Video Camera</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.9 (31)</p>
-        <div class="card-action">
-                <span class="price">P300<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image academic">
-            <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=600" alt="Calculator Set">
-        </div>
-        <div class="card-info">
-            <h3>Engineering Calculator Set</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.6 (28)</p>
-        <div class="card-action">
-                <span class="price">P75<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image lab">
-            <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?q=80&w=600" alt="Stethoscope">
-        </div>
-        <div class="card-info">
-            <h3>Medical Stethoscope</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 5 (14)</p>
-        <div class="card-action">
-                <span class="price">P80<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image media">
-            <img src="https://images.unsplash.com/photo-1493839523149-2864fca44919?q=80&w=600" alt="Lighting Kit">
-        </div>
-        <div class="card-info">
-            <h3>Studio Lighting Kit</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.8 (22)</p>
-        <div class="card-action">
-                <span class="price">P200<small>/day</small></span>
-                <div class="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="item-card">
-        <div class="card-image academic">
-            <img src="https://images.unsplash.com/photo-1596434449071-096053805030?q=80&w=600" alt="Drafting Tools">
-        </div>
-        <div class="card-info">
-            <h3>Drafting Tools Set</h3>
-            <p class="campus">📍 WMSU Campus</p>
-            <p class="stars">⭐ 4.5 (19)</p>
-        <div class="card-action">
-                <span class="price">P40<small>/day</small></span>
-                <div c;ass="vertical-divider"></div>
-                <button class="rent-button">Rent</button>
-            </div>
+            <span class="price">₱80<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
         </div>
     </div>
 </div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge academic-bg">Academic</span>
+        <img src="https://images.unsplash.com/photo-1757256137041-0aab889db199?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y2FzaW8lMjBjYWxjdWxhdG9yfGVufDB8fDB8fHww" alt="Graphing Calculator">
+    </div>
+    <div class="card-info">
+        <h3>Casio Graphing Calculator</h3>
+        <p class="campus">📍 College of Engineering</p>
+        <div class="rating">⭐ 4.9 <span class="review-count">(31 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱60<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge textbooks-bg">Textbook</span>
+        <img src="https://images.unsplash.com/photo-1708011271954-c0d2b3155ded?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGh5c2ljcyUyMGJvb2t8ZW58MHx8MHx8fDA%3D" alt="Physics Book">
+    </div>
+    <div class="card-info">
+        <h3>University Physics Textbook</h3>
+        <p class="campus">📍 College of Science</p>
+        <div class="rating">⭐ 4.6 <span class="review-count">(11 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱40<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge lab-bg">Laboratory</span>
+        <span class="availability">Available Today</span>
+        <img src="https://images.unsplash.com/photo-1593854519602-687eae339d57?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c2FmZXR5JTIwZ29nZ2xlc3xlbnwwfHwwfHx8MA%3D%3D" alt="Lab Goggles">
+    </div>
+    <div class="card-info">
+        <h3>Laboratory Safety Goggles</h3>
+        <p class="campus">📍 College of Nursing</p>
+        <div class="rating">⭐ 4.5 <span class="review-count">(8 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱25<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge media-bg">Media</span>
+        <img src="https://images.unsplash.com/photo-1584672268997-ada4499e0f9b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWluaSUyMGRyb25lfGVufDB8fDB8fHww" alt="Drone">
+    </div>
+    <div class="card-info">
+        <h3>DJI Mini Drone</h3>
+        <p class="campus">📍 Main Campus</p>
+        <div class="rating">⭐ 4.9 <span class="review-count">(28 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱400<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge academic-bg">Academic</span>
+        <span class="availability">Available Today</span>
+        <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bGVub3ZvJTIwbGFwdG9wfGVufDB8fDB8fHww" alt="Laptop">
+    </div>
+    <div class="card-info">
+        <h3>Dell ThinkPad Laptop</h3>
+        <p class="campus">📍 College of Computing</p>
+        <div class="rating">⭐ 4.7 <span class="review-count">(21 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱250<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge lab-bg">Laboratory</span>
+        <img src="https://media.istockphoto.com/id/182424356/photo/colorful-chemicals.webp?a=1&b=1&s=612x612&w=0&k=20&c=twkVP6UtXXG3krmcyD1ui525L9oBReQZz1Axu_H4XXE=" alt="Beaker Set">
+    </div>
+    <div class="card-info">
+        <h3>Chemistry Beaker Set</h3>
+        <p class="campus">📍 College of Science</p>
+        <div class="rating">⭐ 4.4 <span class="review-count">(7 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱35<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge textbooks-bg">Textbook</span>
+        <img src="https://images.unsplash.com/photo-1732304720116-4195b021d8d0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJpb2xvZ3klMjBib29rfGVufDB8fDB8fHww" alt="Biology Book">
+    </div>
+    <div class="card-info">
+        <h3>Campbell Biology Textbook</h3>
+        <p class="campus">📍 College of Nursing</p>
+        <div class="rating">⭐ 4.8 <span class="review-count">(16 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱55<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+
+<div class="item-card">
+    <div class="card-image-wrapper">
+        <span class="category-badge media-bg">Media</span>
+        <span class="availability">Available Today</span>
+        <img src="https://images.unsplash.com/photo-1660631228116-b3643559f611?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9kY2FzdCUyMG1pY3xlbnwwfHwwfHx8MA%3D%3D" alt="Microphone">
+    </div>
+    <div class="card-info">
+        <h3>USB Podcast Microphone</h3>
+        <p class="campus">📍 College of Communication</p>
+        <div class="rating">⭐ 4.6 <span class="review-count">(13 reviews)</span></div>
+        <div class="card-action">
+            <span class="price">₱90<small>/day</small></span>
+            <a href="PaymentFlow.html" class="rent-button">Rent Now</a>
+        </div>
+    </div>
+</div>
+       </div>
     </main>
 
     <footer>
